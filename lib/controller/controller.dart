@@ -2,6 +2,7 @@ import 'package:get/get.dart';
 
 class LoginController extends GetxController {
   var isLoading = false.obs;
+  var PasswordVisible = true.obs;
 
   String? validateEmail(String? value) {
     if (value == null || value.isEmpty) {
@@ -36,5 +37,9 @@ class LoginController extends GetxController {
     } else {
       Get.snackbar('Error', 'Credenciales incorrectas');
     }
+  }
+
+  void passowrdSiVisibleNO() {
+    PasswordVisible.value = !PasswordVisible.value;
   }
 }
